@@ -1,0 +1,402 @@
+
+
+// 1. Find max & min array elements.
+
+
+#include<iostream>
+using namespace std;
+int main(){
+	
+	int arr[20],size,min,max;
+	float avg;
+
+	cout<<"\nEnter the size of array: ";
+	cin>>size;
+	
+	for(int i=0;i<size;i++){
+		cout<<"\nEnetr the elements of array: ";
+		cin>>arr[i];	
+	}
+	min=arr[0];
+	max=arr[0];
+	
+	for(int i=1;i<size;i++){
+		if(arr[i]<min){
+			min=arr[i];
+			continue;
+		}
+		if(arr[i]>max){
+			max=arr[i];
+			continue;
+		}
+	}
+	cout<<"\nMin Element is : "<<min;
+	
+	cout<<"\nMax Element is : "<<max;
+}
+
+
+*****************************************************************************************************************
+
+
+
+// 2. Count frequency of each element.
+
+
+#include <iostream>
+using namespace std;
+int main() 
+{ 
+    int arr[20],size;
+    cout<<"\nEnter the Size of Array : ";
+	cin>>size;
+	
+	cout<<"\nEnter the Array Elements : \n";
+	for(int i=0;i<size;i++)
+	{
+		cin>>arr[i];
+	}
+	
+	int repeat[size];
+    for(int i=0; i<size; i++)
+    {
+        if(repeat[i]!=1)
+        {
+           int count = 1;
+           for(int j=i+1; j<size; j++)
+            {
+              if(arr[i]==arr[j])
+              {
+                 count++;
+                 repeat[j]=1;
+              }
+            }
+			cout<<arr[i]<<" frequency is "<<count<<" times. "<<endl;        
+	}
+     }
+    return 0; 
+}
+
+
+*********************************************************************************************************
+
+
+
+// 3. Separate out +ve, -ve and 0s.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[50],size;
+	
+	cout<<"\nEnter the size of array : ";
+	cin>>size;
+	
+	cout<<"\nEnter the elements of array : ";
+	for(int i=0;i<size;i++)
+	{
+		cin>>arr[i];
+	}
+	
+	cout<<"\n+ve Array Elements Are : ";
+	for(int i=0;i<size;i++)
+	{
+		if(arr[i]>0){
+			cout<<arr[i]<<"  ";
+			continue;
+		}
+		
+	}
+	
+	cout<<"\n-ve Array Elements Are : ";
+	for(int i=0;i<size;i++)
+	{
+		if(arr[i]<0){
+			cout<<arr[i]<<"  ";
+			continue;
+		}
+		
+	}
+	
+	cout<<"\nZero Array Elements Are : ";
+	for(int i=0;i<size;i++)
+	{
+		if(arr[i]==0){
+			cout<<arr[i]<<"  ";
+			continue;
+		}
+		
+	}
+}
+
+
+
+******************************************************************************************************************
+
+
+
+// 4. Reverse the array elements.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[50],size;
+	
+	cout<<"\nEnter the size of array : ";
+	cin>>size;
+	
+	cout<<"\nEnter the array elements : ";
+	for (int i=0;i<size;i++)
+	{
+		cin>>arr[i];
+	}
+	
+	cout<<"\nArray Elements in Reversed Order : ";
+	for(int i=size-1;i>=0;i--)
+	{
+		cout<<arr[i]<<" ";
+	}
+}
+
+
+
+*******************************************************************************************************
+
+
+
+// 5. Sum of 10 integers.
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[50],size;
+	int sum=0;
+	
+	cout<<"\nEnter the size of array : ";
+	cin>>size;
+	
+	cout<<"\nEnter the array elements : ";
+	for (int i=0;i<size;i++)
+	{
+		cin>>arr[i];
+	}
+	
+	for(int i=0;i<size;i++)
+	{
+		sum+=arr[i];
+		
+	}
+	cout<<"\nSum of Array Elements is : "<<sum;
+
+	
+}
+
+
+
+**********************************************************************************************************
+
+
+
+// 6. Sum of even numbers in array.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[50],size;
+	int sum=0;
+	
+	cout<<"\nEnter the size of array : ";
+	cin>>size;
+	
+	cout<<"\nEnter the array elements : ";
+	for (int i=0;i<size;i++)
+	{
+		cin>>arr[i];
+	}
+	
+	for(int i=0;i<size;i++)
+	{
+		if(arr[i]%2==0)
+		{
+			sum+=arr[i];
+			continue;	
+		}
+	}
+	cout<<"\nSum of all Even Numbers of Array is : "<<sum;
+}
+
+
+
+*************************************************************************************************************
+
+
+
+
+// 7. Print odd numbers in array.
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[50],size;
+	
+	cout<<"\nEnter the size of array : ";
+	cin>>size;
+	
+	cout<<"\nEnter the array elements : ";
+	for (int i=0;i<size;i++)
+	{
+		cin>>arr[i];
+	}
+	
+	cout<<"\nOdd Numbers of Array is : ";
+	for(int i=0;i<size;i++)
+	{
+		if(arr[i]%2!=0)
+		{
+			cout<<arr[i]<<"  ";
+			continue;	
+		}
+	}
+}
+
+
+
+
+
+*************************************************************************************************
+
+
+
+// 8. Search a number in an array
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[50],size,n;
+	
+	cout<<"\nEnter the size of array : ";
+	cin>>size;
+	
+	cout<<"\nEnter the array elements : ";
+	for (int i=0;i<size;i++)
+	{
+		cin>>arr[i];
+	}
+	cout<<"\nEnter the element to be Search : ";
+	cin>>n;
+	
+	cout<<"\nPrint the Given element : ";
+	for(int i=0;i<size;i++)
+	{
+		if(arr[i]==n)
+		{
+			cout<<"\nAt size of array "<<i<<" is "<<arr[i]<<"  ";
+			continue;	
+		}
+	}
+}
+
+
+
+
+***************************************************************************************************************
+
+
+
+// 9. Sum of diagonal elements.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n,m,sum=0;
+	int arr[5][5];
+	
+	cout<<"\nEnter Row and column : ";
+	cin>>n>>m;
+	
+	
+	cout<<"\nEnter the elements in 2-D Array Elements : ";
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			cin>>arr[i][j];
+		}
+	}
+	
+	cout<<"\nPrint the Matrix : \n";
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			cout<<arr[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+	
+	
+	cout<<"\nSum of Diagonal Element is : ";
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			if(i==j){
+				sum+=arr[i][j];
+				
+			}
+		}
+	}
+	cout<<sum;
+}
+
+
+
+****************************************************************************************************
+
+
+
+
+// 10. Sort array in descending order.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[50],size;
+	
+	cout<<"\nEnter the size of Array : ";
+	cin>>size;
+	
+	cout<<"\nEnter the elements in Array : ";
+	
+	for(int i=0;i<size;i++)
+	{
+		cin>>arr[i];
+	}
+	
+	for(int i=0;i<size-1;i++)
+	{
+		for(int j=0;j<size-1;j++)
+		{
+			if(arr[j]>arr[j+1])
+			{
+				int temp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;	
+			}
+		}
+	}
+	
+	cout<<"\nSorted array in Descdending Order : \n";
+	for(int i=size-1;i>=0;i--)
+	{
+		cout<<arr[i]<<"  ";
+	}
+}
+
+
+

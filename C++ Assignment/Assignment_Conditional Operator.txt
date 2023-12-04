@@ -1,0 +1,325 @@
+
+// 1. Check number is less than 10
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int no;
+    cout<<"Enter Number: ";
+    cin>>no;
+    if(no<10)
+      {
+          cout << no << " : Number is less than 10";
+      }
+      
+    else
+     {
+         cout<<no<<"Try Again";
+     }
+    return 0;
+}
+
+
+****************************************************************************
+
+
+
+// 2. Check numbers are equivalent
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int no1,no2;
+    cout<<"Enter Number_1: ";
+    cin>>no1;
+    
+    cout<<"Enter Number_2: ";
+    cin>>no2;
+    
+    if(no1==no2)
+      {
+          cout<<no1<<no2<< " : Number are equivalent ";
+      }
+      
+    else
+     {
+         cout<<"Number are not equivalent";
+     }
+    return 0;
+}
+
+
+
+
+*********************************************************************************************
+
+
+
+// 3. Check voting eligibility
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int age;
+    cout<<"Enter your age: ";
+    cin>>age;
+    
+    if(age>=18)
+      {
+          cout<<age<< " : You are eligible for voting ";
+      }
+      
+    else
+     {
+         cout<<"You are not eligible for voting";
+     }
+    return 0;
+}
+
+
+
+***************************************************************************************
+
+
+
+// 4. Check if number is even or odd 
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int no1;
+    cout<<"Enter your number: ";
+    cin>>no1;
+    
+    if(no1%2==0)
+      {
+          cout<<no1<< " : Number is even ";
+      }
+      
+    else
+     {
+         cout<<"Number is odd";
+     }
+    return 0;
+}
+
+
+**************************************************************************************
+
+
+// 5. Enter three angles & check if it is a triangle
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int angle1,angle2,angle3,sum;
+    cout<<"Enter three angle: ";
+    cin>>angle1>>angle2>>angle3;
+    sum=angle1+angle2+angle3;
+    
+    if(sum==180)
+      {
+          cout<<sum<< ": Given angle makes triangle ";
+      }
+      
+    else
+     {
+         cout<<" Given angle do not make a triangle";
+     }
+    return 0;
+}
+
+
+*******************************************************************************************
+
+
+// 6. Find total marks & percentage
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int s1,s2,s3,total;
+    float per;
+    cout<<"Enter marks: ";
+    cin>>s1>>s2>>s3;
+    total=s1+s2+s3;
+    per=total/3;
+    
+    cout<<"marks are="<<total;
+    cout<< "\npercentage is="<<per;
+    
+    
+}
+
+
+*************************************************************************
+
+
+
+// 7. Check for leap year
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int year;
+    cout<<"Enter year: ";
+    cin>>year;
+    
+   if(year%4==0)
+    {
+    	cout<<year<<" is leap year";
+	}
+	else
+	{
+		cout<<year<<" is not leap year";
+	}
+
+    
+    
+}
+
+***************************************************************************************
+
+
+// 8. Check number is +ve, -ve or zero
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int no;
+    cout<<"Enter number: ";
+    cin>>no;
+    
+   if(no<0)
+    {
+    	cout<<no<<" is -ve";
+	}
+	else if(no>0)
+	{
+	   cout<<no<<" is +ve"; 
+	}
+	
+	else
+	{
+		cout<<no<<"is Zero";
+	}
+
+    
+    
+}
+
+
+*****************************************************************************
+
+
+// 9. Calculate sum of Fibonacci series up to n terms
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int n,i,n0=0,n1=1,nn,sum=0;
+    cout<<"Enter number: ";
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+       if(i<=1)
+       {
+    	 cout<<i<<",";
+    	 sum+=i;            //sum=sum+i
+	   }
+	
+    	else
+    	{
+	       nn=n0+n1;
+	       n0=n1;
+	       n1=nn;
+	       sum+=nn;
+	    } 
+	    	   
+    }
+    cout<<"\naddition of fibonnacci series is: "<<sum;
+    
+}
+   
+
+    *********************************************************************************
+
+// 10. Calculate H.C.F using while loop
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int i=1,n1,n2,hcf;
+	cout<<"Enter n:";
+	cin>>n1>>n2;
+	while(i<=n1 || i<=n2)
+	{
+	    if(n1%i==0 && n2%i==0)
+	    hcf=i;
+	  	i++;
+	} 
+	cout<<"HCF is: "<<hcf;
+}
+
+
+
+
+
+    
+
+
+

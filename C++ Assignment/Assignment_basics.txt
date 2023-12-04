@@ -1,0 +1,355 @@
+//1. Print given statement
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<"Hello Sir";
+
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------
+// 2. Declare & print variables
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x;
+    x=10;
+    cout<<"Declared Variable is:"<<x;
+    return 0;
+}
+
+--------------------------------------------------------------------------------
+
+// 3. Find sum of numbers
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int int1,int2,sum;
+    cout<<"Enter Two Numbers: ";
+    cin>>int1>>int2;
+    sum=int1+int2;
+    cout<<"\n Addition of two numbers is:"<<sum;
+    return 0;
+}
+
+--------------------------------------------------------------------------------
+// 4. Difference of two numbers
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int int1,int2,diff;
+    cout<<"Enter Two Number: ";
+    cin>>int1>>int2;
+    diff=int1-int2;
+    cout<<"\n Difference of two numbers is: "<<diff;
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------
+// 5. Multiplication of two numbers
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int int1,int2,mul;
+    cout<<"Enter Two Numbers: ";
+    cin>>int1>>int2;
+    mul=int1*int2;
+    cout<<"\n Multiplication of two numbers is:"<<mul;
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------
+// 6. Division of two numbers
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float int1,int2,Division;
+        cout<<"Enter Two Number: ";
+        cin>>int1>>int2;
+        Division=int1/int2;
+    cout<<"\n Division of two numbers is: "<<Division;
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------
+// 7. Find last digit of number
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int int1,last_digit;
+    cout<<"Enter Number: ";
+    cin>>int1;
+    last_digit=int1%10;
+    cout<<"\n single digit is:"<<last_digit;
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------
+// 8. Add two digits of a number
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int int1,r,q,add;
+    cout<<"Enter Numbers: ";
+    cin>>int1;
+    
+    if(int1>=10 && int1<=99)
+    {
+        r=int1%10;
+        q=int1/10;
+        
+        add=r+q;
+        
+        cout<<"\n Two Digits of Number is: "<<add;
+        
+    }
+    else
+    {
+    cout<<"\n Invalid Entry";
+    }
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------
+// 9. Sum of 3 digits of a number
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int int1,r,q,sum=0;
+    cout<<"Enter Numbers: ";
+    cin>>int1;
+    
+ 
+    if(int1>=100 && int1<=999)
+    {
+        while(int1>0)
+        {
+        r=int1%10;
+        
+        sum=sum+r;
+        
+        int1=int1/10;
+        }
+        
+        
+        cout<<"\n Three Digits of Number is: "<<sum;
+        
+    }
+    
+    
+    else
+    {
+    cout<<"\n Invalid Entry";
+    }
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------
+// 10. Sum of 4 digits of a number
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int int1,r,q,sum=0;
+    cout<<"Enter Numbers: ";
+    cin>>int1;
+    
+ 
+    if(int1>=1000 && int1<=9999)
+    {
+        while(int1>0)
+        {
+        r=int1%10;
+        
+        sum=sum+r;
+        
+        int1=int1/10;
+        }
+        
+        
+        cout<<"\n Three Digits of Number is: "<<sum;
+        
+    }
+    
+    
+    else
+    {
+    cout<<"\n Invalid Entry";
+    }
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------
+// 11. Swap using third variable
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,temp=0;
+    cout<<"Enter Numbers: ";
+    cin>>a>>b;
+    temp=a;
+    a=b;
+    b=temp;
+    
+  cout<<"\n Swap Number is: "<<a<<","<<b;
+        
+
+}
+
+
+--------------------------------------------------------------------------------
+// 12. Swap without third variable
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cout<<"Enter Numbers: ";
+    cin>>a>>b;
+     a=a+b;
+     b=a-b;
+     a=a-b;
+     
+
+  cout<<"\n Swap Number is: "<<a<<","<<b;
+   
+}
+
+--------------------------------------------------------------------------------
+// 13. Average of three numbers
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,c;
+    float avg;
+    cout<<"Enter three Numbers: ";
+    cin>>a>>b>>c;
+     avg=(a+b+c)/3;
+
+  cout<<"\n avg Number is: "<<avg;
+   
+   
+}
+
+
+--------------------------------------------------------------------------------
+// 14. Find total marks & percentage
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int s1,s2,s3,total;
+    float per;
+    cout<<"Enter three sub marks: ";
+    cin>>s1>>s2>>s3;
+     total=s1+s2+s3;
+   cout<<"\n total marks is: "<<total;
+
+  per=total/3;
+  cout<<"\n per is: "<<per<<"%";
+
+}
+
+
+--------------------------------------------------------------------------------
+// 15. Swap with bitwise operator
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cout<<"Enter Numbers: ";
+    cin>>a>>b;
+     a=a^b;
+     b=a^b;
+     a=a^b;
+     
+
+  cout<<"\n Swap Number is: "<<a<<","<<b;
+   
+   
+}
+--------------------------------------------------------------------------------
+
+
+
+

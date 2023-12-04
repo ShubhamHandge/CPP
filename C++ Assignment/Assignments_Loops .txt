@@ -1,0 +1,287 @@
+
+
+
+
+
+
+
+// 1. Print 10 to 1 numbers
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num;
+	
+	cout<<"\nPrinting Number from 10 to 1."<<endl;
+	for(int i=10;i>=1;i--)
+	{
+		cout<<i<<endl;
+	}
+}
+
+
+**************************************************************************************
+
+
+
+
+
+
+// 2. Sum of first n even numbers
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num,sum=0;
+	cout<<"\nEnter the entries to print : ";
+	cin>>num;
+	
+	for(int i=1;i<=num;i++){
+		if(i%2==0)
+			sum+=i;
+	}
+	cout<<"\nSum of all even Numbers is : "<<sum;
+}
+
+
+************************************************************************************************
+
+
+
+
+
+// 3. Print factorial of a number
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num,fact=1;
+	cout<<"\nEnter the entries of numbers : ";
+	cin>>num;
+	
+	for(int i=1;i<=num;i++)
+	{
+		fact*=i;
+	}
+	
+	if(num>0){
+		cout<<"\nFactorial of "<<num<<" is : "<<fact;
+
+	}
+	else{
+		cout<<"\nSorry. Try Again.";
+	}
+}
+
+
+*************************************************************************************************************
+
+
+
+
+// 4. Number perfectly dividing given number
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num,divi;
+	cout<<"\nEnter the Number : ";
+	cin>>num;
+	
+	cout<<"\nNumbers That are Perfectly divisible by range in 1 to "<<num<<" ."<<endl;
+	for(int i=1;i<=num;i++)
+	{
+		if(num%i==0)
+		{
+			cout<<i<<"  ";
+		}
+	}
+}
+
+
+******************************************************************************************************
+
+
+
+
+// 5. Square roots of 1 to 9 numbers
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+	int num;
+	for(int i=1;i<10;i++)
+	{
+		cout<<"Squre root of "<<i<<" is -> "<<sqrt(i)<<endl;
+	}
+}
+
+
+***********************************************************************************************
+
+
+
+
+// 6. Numbers not divisible by 2, 3, 5
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout<<"\nNumbers That are not divisible by 2 , 3 , 5."<<endl;
+	for(int i=1;i<=100;i++)
+	{
+		if(i%2!=0 && i%3!=0 && i%5!=0)
+		{
+			cout<<i<<"\t";
+			
+		}
+	}
+}
+
+
+
+************************************************************************************************
+
+
+
+// 7. Harmonic sequence & its sum
+// H.M=1/(a+(i-1)*d)
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a,b=2,num;
+	float sequ,sum=0.0f;
+	cout<<"\nEnter the Range : ";
+	cin>>num;
+	cout<<"\nEnetr initial value : ";
+	cin>>a;
+	
+	for(int i=1;i<=num;i++)
+	{
+		sequ=1/(float)(a+(i-1)*b);	// formula for harmonic sequence
+		sum+=sequ;
+	}
+	
+	cout<<"\nHarmonic Sequence is : "<<sequ;
+	cout<<"\nSum of All Printed Sequence is : "<<sum;
+}
+
+
+************************************************************************************************
+
+
+
+
+// 8. Arithmetic progression & its sum
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	float num,first_term,comm_diff,arith_preg;
+	float ap_sum;
+	
+	cout<<"\nEnter the range of numbers : ";
+	cin>>num;
+	cout<<"\nEnter first Term of AP : ";
+	cin>>first_term;
+	cout<<"\nEnter the common difference of an AP : ";
+	cin>>comm_diff;
+	
+	
+	cout<<"\n AP Expression is:   ";
+	for(int i=1;i<=num;i++)
+	{
+		
+		cout<<first_term<<" + ";
+		first_term+=comm_diff;	
+		
+		ap_sum=(num / 2) * (2 * first_term + (num - 1) * comm_diff);
+	}
+	
+	
+	cout<<"\n Sum of an AP is : "<<ap_sum;
+}
+
+
+***************************************************************************************************************
+
+
+
+
+
+// 9. Exponential series & its sum
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num;
+	float a,sum=1,t=1;
+	
+	cout<<"\nEnter the value of a : ";
+	cin>>a;
+	
+	cout<<"\nEnter the number : ";
+	cin>>num;
+	
+	for(int i=1;i<=num;i++)
+	{
+		t=t*a/i;
+		sum+=t;
+	}
+	
+	cout<<"\nThe Exponential Value of "<<a<<" = "<<sum;
+	
+}
+
+
+***************************************************************************************************
+
+// 10. Sum of Expanded Geometric Sequence
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	float num,first_term,comm_diff,arith_preg;
+	float gp_sum;
+	
+	cout<<"\nEnter the range of numbers : ";
+	cin>>num;
+	cout<<"\nEnter first Term of AP : ";
+	cin>>first_term;
+	cout<<"\nEnter the common difference of an AP : ";
+	cin>>comm_diff;
+	
+	
+	cout<<"\n GP Expression is:   ";
+	for(int i=1;i<=num;i++)
+	{
+		
+		cout<<first_term<<" + ";
+		
+		gp_sum += first_term;
+		
+		first_term*=comm_diff;	
+	}
+	
+	
+	cout<<"\n Sum of an GP is : "<<gp_sum;
+}
+
+
+
+
+
+
+
